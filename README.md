@@ -11,8 +11,8 @@ POO
 * javac *.java
 * java POO
 
-Web Scraper
+Web Scraper -> ecommerce utilizado: STEAM ( https://store.steampowered.com)
 * cd Web_Scraper
-* javac *.java
+* javac WebScraper.java
 * java WebScraper
 
