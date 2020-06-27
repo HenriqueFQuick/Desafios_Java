@@ -2,6 +2,23 @@ import java.net.*;
 import java.io.*;
 import java.util.Scanner;
 
+
+/*
+    Recuperacao e leitura de alguns campos da pagina informada:
+
+    Nome do Jogo
+    Nome da empresa desenvolvedora
+    Requisitos minimos para rodar o jogo
+        Sistema Operacional
+        Processador
+        Memoria
+        DirectX
+        Rede
+        Armazenamento
+
+    ---Essa leitura eh feita a partir das paginas de produtos da STEAM apenas---
+    Exemplo de entrada: https://store.steampowered.com/app/440/Team_Fortress_2
+*/
 public class WebScraper {
     public static void main(String[] args) throws Exception {
         Scanner read = new Scanner(System.in);
@@ -14,7 +31,7 @@ public class WebScraper {
                 erro = false;
                 System.out.print("Digite uma url de um produto da STEAM: ");
                 String siteInput = read.nextLine();
-                //tentativa de ler a pagina e colcoar seu conteudo em uma variavel ( site )
+                //tentativa de ler a pagina e colocar seu conteudo em uma variavel ( variavel site )
                 try{
                     URL url = new URL(siteInput);
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -22,7 +39,9 @@ public class WebScraper {
                     String inputLine;
                     while ((inputLine = in.readLine()) != null)
                         site+=inputLine;
+
                     in.close();
+
                 }catch (Exception e){
                     //caso ocorra erro, mostre o erro e faca a pergunta novamente.
                     System.out.println("Ocorreu um erro!\nDescricao: " + e.toString());
