@@ -14,7 +14,7 @@ public class WebScraper {
                 erro = false;
                 System.out.print("Digite uma url de um produto da STEAM: ");
                 String siteInput = read.nextLine();
-
+                //tentativa de ler a pagina e colcoar seu conteudo em uma variavel ( site )
                 try{
                     URL url = new URL(siteInput);
                     BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -24,19 +24,21 @@ public class WebScraper {
                         site+=inputLine;
                     in.close();
                 }catch (Exception e){
+                    //caso ocorra erro, mostre o erro e faca a pergunta novamente.
                     System.out.println("Ocorreu um erro!\nDescricao: " + e.toString());
                     erro = true;
                 }
             }while(erro);
 
             site.trim();
+
+            //Leitura do nome do Jogo
             int gameTitleInitialIndex = site.indexOf("<title>");
             int gameTitleFinalIndex = site.indexOf("</title>");
-
             String gameTitle = site.substring(gameTitleInitialIndex+7, gameTitleFinalIndex-9);
             System.out.println("\nNome do jogo: "+gameTitle);
 
-
+            //Leitura do nome do desenvolvedor do jogo (empresa)
             int developerIndex = site.indexOf("Developer:");
             int developerInitialIndex = site.indexOf("<a ", developerIndex);
             int developerFinalIndex = site.indexOf("</a>", developerIndex);
@@ -44,6 +46,8 @@ public class WebScraper {
             String developer = site.substring(developerInitialIndex+73, developerFinalIndex);
             System.out.println("Desenvolvedores: "+developer);
 
+            //leitura dos campos de requisitos minimos para rodar o jogo
+            //OS, Processor, Memory, DirectX, Network, Storage
             int requisitosIndex = site.indexOf("sysreq_contents");
             int requisitosInitialIndex = site.indexOf("Minimum", requisitosIndex);
             int requisitosFinalIndex = site.indexOf("<div class=\"game_area_sys_req_rightCol\">", requisitosIndex);

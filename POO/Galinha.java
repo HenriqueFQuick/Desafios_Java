@@ -16,6 +16,7 @@ class Galinha extends Aves implements Sons {
         CorPena = pena;
     }
     
+    //implementacao da interface Sons
     public void emitirSom(){
         System.out.println("Som emitido: "+getSomEmitido()+"\n"); 
     }

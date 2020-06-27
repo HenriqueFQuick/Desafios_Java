@@ -1,3 +1,4 @@
+//Classe mais generica contendo atributos comuns a todos os animais
 class Animais {
 
     private int _idade;

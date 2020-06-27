@@ -38,6 +38,8 @@ public class POO {
             stop = (!read.nextLine().trim().toUpperCase().toString().equals("S")) ? true : false;
         }
     }
+
+    //Criacao do animal PATO
     public static void createPato(){
         System.out.print("Digite a idade do Pato: ");
         idade = read.nextInt();
@@ -53,6 +55,8 @@ public class POO {
         System.out.println(pato);
         pato.emitirSom();
     }
+    
+    //Criacao do animal GALINHA
     public static void createGalinha(){
         System.out.print("Digite a idade da Galinha: ");
         idade = read.nextInt();
@@ -66,6 +70,7 @@ public class POO {
         System.out.println(galinha);
         galinha.emitirSom();
     }
+    //Criacao do animal VACA
     public static void createVaca(){
         System.out.print("Digite a idade da Vaca: ");
         idade = read.nextInt();
@@ -79,6 +84,7 @@ public class POO {
         System.out.println(vaca);
         vaca.emitirSom();
     }
+    //Criacao do animal MORCEGO
     public static void createMorcego(){
         System.out.print("Digite a idade do Morcego: ");
         idade = read.nextInt();

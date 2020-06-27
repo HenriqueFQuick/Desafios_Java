@@ -18,6 +18,7 @@ class Pato extends Aves implements Sons {
         AlturaVoo = voo;
     }
     
+    //implementacao da interface Sons
     public void emitirSom(){
        System.out.println("Som emitido: "+getSomEmitido()+"\n"); 
     }

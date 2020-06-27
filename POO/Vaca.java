@@ -16,6 +16,7 @@ class Vaca extends Mamifero implements Sons {
         CorPelo = pelo;
     }
 
+    //implementacao da interface Sons
     public void emitirSom(){
         System.out.println("Som emitido: "+getSomEmitido()+"\n"); 
     }

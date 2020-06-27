@@ -17,6 +17,7 @@ class Morcego extends Mamifero implements Sons{
         AlturaVoo = voo;
     }
 
+    //implementacao da interface Sons
     public void emitirSom(){
         System.out.println("Som emitido: "+getSomEmitido()+"\n"); 
     }

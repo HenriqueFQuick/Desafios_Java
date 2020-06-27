@@ -1,3 +1,4 @@
+//Classe menos generica contendo propriedades comuns aos animais ( extends Animais ) e especificas de mamiferos.
 class Mamifero extends Animais {
     private boolean _amamenta = true;
     private String _pelo;

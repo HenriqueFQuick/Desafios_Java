@@ -1,3 +1,4 @@
+//Classe menos generica contendo propriedades comuns aos animais ( extends Animais ) e especificas de aves.
 public class Aves extends Animais {
    private boolean _poeOvo = true;
    private String _pena;
