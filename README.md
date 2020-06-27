@@ -16,5 +16,7 @@ Desafio Web Scraper
 * cd Web_Scraper
 * javac WebScraper.java
 * java WebScraper
+
 E-commerce utilizado: STEAM ( https://store.steampowered.com )
+
 Exemplo: https://store.steampowered.com/app/440/Team_Fortress_2
